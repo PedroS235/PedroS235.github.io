@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #334756;
+  --background-color: #082032;
+  --text-color: #2c394b;
+  --accent-color: #ff4c29;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Common Styles */
+
+body {
+  background-color: var(--background-color);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar-title a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-bar {
+  background-color: var(--primary-color);
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 30vw;
+  text-align: center;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color); /* Accent color */
+  bottom: -4px; /* Adjust as needed to position the line */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: calc(100% - 5px); /* Adjust as needed to extend the line */
+}
+
+/* Apply styles to active navigation link */
+.nav-links .active a::after {
+  width: calc(100% - 5px);
+  color: var(--accent-color);
+}
+
+/* Apply styles to active navigation link */
+.nav-links .active a {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* About me page */
+
+/* Apply styles to the profile picture container */
+.profile-picture {
+  width: 20vw; /* 20% of the viewport width */
+  height: 20vw; /* 20% of the viewport width */
+  border-radius: 50%; /* Create a circular shape */
+  overflow: hidden; /* Clip the image within the circular shape */
+  border: 2px solid var(--accent-color);
+}
+
+/* Apply styles to the circular image */
+.profile-picture img {
+  display: block; /* Remove any extra spacing */
+  width: 100%; /* Make the image fill the circular container */
+  height: 100%; /* Make the image fill the circular container */
+  object-fit: cover; /* Scale the image while maintaining aspect ratio */
+}
+
+.container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.about-desc {
+  margin: 5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 2;
+  align-items: center;
+}
+
+/* Projects page */
+
+/* Contact page */
