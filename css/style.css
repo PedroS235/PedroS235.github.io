@@ -1,128 +1,95 @@
 :root {
-  --primary-color: #334756;
-  --background-color: #082032;
-  --text-color: #2c394b;
-  --accent-color: #ff4c29;
+  --background-color: #252a34;
+  --primary-color: #08d9d6;
+  --text-color: #eaeaea;
+  --accent-color: #ff2e63;
+  --navbar-bg: #393e46;
+  --navbar-text-color: var(--text-color);
+  --navbar-link-color: var(--text-color);
+  --navbar-link-color-active: var(--accent-color);
+  --navbar-link-hover-color: var(--primary-color);
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   font-family: 'Poppins', sans-serif;
+}
+/* Navigation bar */
+
+.navbar-brand {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+  color: var(--primary-color);
+}
+
+.navbar {
+  background-color: var(--navbar-bg);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-toggler-icon {
+  color: var(--navbar-text-color);
+}
+
+.navbar-nav .nav-link {
+  color: var(--navbar-link-color);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--navbar-link-color-active);
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--navbar-link-hover-color);
 }
 
 /* Common Styles */
 
 body {
   background-color: var(--background-color);
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  color: var(--text-color);
 }
 
-.nav-bar-title a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.nav-bar {
-  background-color: var(--primary-color);
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  align-items: center;
-  width: 30vw;
-  text-align: center;
-  padding: 0;
-}
-
-.nav-links li {
-  margin: 0 15px;
-  position: relative;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #ffffff;
-  position: relative;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: var(--accent-color); /* Accent color */
-  bottom: -4px; /* Adjust as needed to position the line */
-  left: 50%;
-  transform: translateX(-50%);
-  transition: width 0.3s ease-in-out;
-}
-
-.nav-links a:hover::after {
-  width: calc(100% - 5px); /* Adjust as needed to extend the line */
-}
-
-/* Apply styles to active navigation link */
-.nav-links .active a::after {
-  width: calc(100% - 5px);
+.fab {
   color: var(--accent-color);
 }
 
-/* Apply styles to active navigation link */
-.nav-links .active a {
-  color: var(--accent-color);
-  font-weight: bold;
+.footer {
+  background-color: var(--navbar-bg);
+  margin: 0px auto;
+  padding: 20px 0px 20px 0px;
 }
 
 /* About me page */
 
-/* Apply styles to the profile picture container */
+.row {
+  display: flex;
+  flex-wrap: wrap-reverse; /* Reverses the order of flex items on smaller screens */
+  align-items: center; /* Vertically center align items */
+}
+
 .profile-picture {
   width: 20vw; /* 20% of the viewport width */
   height: 20vw; /* 20% of the viewport width */
   border-radius: 50%; /* Create a circular shape */
-  overflow: hidden; /* Clip the image within the circular shape */
+  overflow: hidden; /* Hide any overflow from the circular shape */
+  margin: 0 auto; /* Horizontally center the profile picture */
   border: 2px solid var(--accent-color);
 }
 
-/* Apply styles to the circular image */
 .profile-picture img {
-  display: block; /* Remove any extra spacing */
-  width: 100%; /* Make the image fill the circular container */
-  height: 100%; /* Make the image fill the circular container */
-  object-fit: cover; /* Scale the image while maintaining aspect ratio */
-}
-
-.container {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+  height: auto;
+  object-fit: cover; /* Scale the image while maintaining aspect ratio */
+  display: block; /* Remove any extra spacing */
 }
 
 .about-desc {
-  margin: 5rem 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 2;
-  align-items: center;
+  padding: 20px; /* Add padding to the text container */
 }
 
 /* Projects page */
