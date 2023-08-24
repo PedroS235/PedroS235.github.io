@@ -1,3 +1,7 @@
+/* ----------------------------------------------------------------------------*/
+/* ------------------------------| CSS Variables |-----------------------------*/
+/* ----------------------------------------------------------------------------*/
+
 :root {
   --background-color: #252a34;
   --primary-color: #08d9d6;
@@ -10,15 +14,51 @@
   --navbar-link-hover-color: var(--primary-color);
 }
 
+/* ----------------------------------------------------------------------------*/
+/* ------------------------------| Global Styles |-----------------------------*/
+/* ----------------------------------------------------------------------------*/
+
 * {
   font-family: 'Poppins', sans-serif;
 }
-/* Navigation bar */
 
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: var(--navbar-bg);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 7rem;
+}
+
+/* Icons Colors */
+.fab {
+  color: var(--accent-color);
+}
+
+/* ----------------------------------------------------------------------------*/
+/* ----------------------------| NavBar Styles |-------------------------------*/
+/* ----------------------------------------------------------------------------*/
+
+/* Change burger box */
 .navbar-toggler {
   border-color: var(--primary-color);
 }
 
+/* Change burger lines */
 .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 46, 99, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
@@ -39,10 +79,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.navbar-toggler-icon {
-  color: var(--navbar-text-color);
-}
-
 .navbar-nav .nav-link {
   color: var(--navbar-link-color);
 }
@@ -55,51 +91,54 @@
   color: var(--navbar-link-hover-color);
 }
 
-/* Common Styles */
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.fab {
-  color: var(--accent-color);
-}
-
-.footer {
-  background-color: var(--navbar-bg);
-  margin: 0px auto;
-  padding: 20px 0px 20px 0px;
-}
-
-/* About me page */
-
-.row {
-  display: flex;
-  flex-wrap: wrap-reverse; /* Reverses the order of flex items on smaller screens */
-  align-items: center; /* Vertically center align items */
-}
+/* ----------------------------------------------------------------------------*/
+/* ---------------------------| About Me Styles |------------------------------*/
+/* ----------------------------------------------------------------------------*/
 
 .profile-picture {
-  width: 20vw; /* 20% of the viewport width */
-  height: 20vw; /* 20% of the viewport width */
-  border-radius: 50%; /* Create a circular shape */
-  overflow: hidden; /* Hide any overflow from the circular shape */
-  margin: 0 auto; /* Horizontally center the profile picture */
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
   border: 2px solid var(--accent-color);
 }
 
 .profile-picture img {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Scale the image while maintaining aspect ratio */
-  display: block; /* Remove any extra spacing */
+  object-fit: cover;
+  display: block;
 }
 
 .about-desc {
   padding: 20px; /* Add padding to the text container */
 }
 
-/* Projects page */
+/* ----------------------------------------------------------------------------*/
+/* ---------------------------| Projects Styles |------------------------------*/
+/* ----------------------------------------------------------------------------*/
+
+.card {
+  color: var(--text-color);
+  margin: 2px 0px 2px 0px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--navbar-bg);
+  min-height: 50vh;
+}
+
+.card-title {
+  color: var(--primary-color);
+}
+
+.btn.card-btn {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+.btn.card-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
 
 /* Contact page */

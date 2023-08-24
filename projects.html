@@ -15,6 +15,7 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -24,45 +25,232 @@
     <title>My Porfolio</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Pedro Soares</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center nav-underline"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
-                >Projects</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contact.html">Contact</a>
-            </li>
-          </ul>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Pedro Soares</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center nav-underline"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container justify-content-center mt-5 mb-5">
+        <h1 class="text-center">My Projects</h1>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
+          <!-- Project 1: EggCubator -->
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">EggCubator</h5>
+                <p class="card-text">
+                  EggCubator is an Arduino-based program that controls the
+                  incubation period of chicken eggs (or any other type of egg).
+                  It's main target is to control the temperature inside the
+                  incubator, which uses a PID controller for controlling an
+                  heating source. In addition, the controller is also able to
+                  rotate a DC motor in order to rotate the eggs every x amount
+                  of time. Furthermore, the controller will also be able to
+                  control the humidity inside the incubator, by controlling and
+                  opening using a servo motor, letting fresh air enter or not.
+                  This however, is just theory and I cannot be sure that it will
+                  be able to adjust the humidity. Therefore, this must still be
+                  tested and implemented.
+                </p>
+                <a
+                  href="https://github.com/PedroS235/eggcubator"
+                  target="_blank"
+                  class="btn card-btn"
+                  >GitHub Repo</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Tello ROS Wrapper -->
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tello ROS Wrapper</h5>
+                <p class="card-text">
+                  This is a ROS2 package that allows a user to control a DJI
+                  Tello drone using ROS topics. Therefore, the user can control
+                  the drone using velocity commands or triggering the drone to
+                  take-off and land via the respective topics. In addition, the
+                  wrapper is also constantly publishing the image feed received
+                  by the drone to a topic, as well as the flight data received
+                  by the drone. <br />
+                  The package is based on the TelloPy library (the latest
+                  version), which is a Python library for controlling the Tello
+                  drone.
+                </p>
+                <a
+                  href="https://github.com/PedroS235/tello_ros_wrapper"
+                  target="_blank"
+                  class="btn card-btn"
+                  >GitHub Repo</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Discord Bot -->
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Discord Bot</h5>
+                <p class="card-text">
+                  This project consisted in creating a Discord Bot for my
+                  bachelor Discord server with the purpose of making it easier
+                  to manage the server. The bot is able to perform several
+                  tasks, such as: <br />
+                  &nbsp; - Assigning roles to users <br />
+                  &nbsp - Sending a welcome message to new users <br />
+                  &nbsp - Provide guidelines for the server and the university
+                  <br />
+                  &nbsp - etc... <br />
+                  Since the initial creation, some of my colleagues have also
+                  contributed to the project, adding new features to the bot. As
+                  of now, the bot developement will be taken over by an
+                  university association from which I am Vice-President, which
+                  will favour open-source development.
+                </p>
+                <a
+                  href="https://github.com/PedroS235/BICS-BOT"
+                  target="_blank"
+                  class="btn card-btn"
+                  >GitHub Repo</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Perceptron Workspace -->
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Perceptron Workspace</h5>
+                <p class="card-text">
+                  This project will be part of a Youtube series that I will be
+                  creating, where I will be explaining on how to create a
+                  autonomous robot from scracth using a combination of low-level
+                  and high-level programming. <br />
+                  This Workspace will contain all the code and files that will
+                  be used in the series. <br />
+                  The low-level programming will be done using C++ and the
+                  Arduino IDE, where I will be creating a library for
+                  controlling the robot's motors and sensors. <br />
+                  The high-level programming will be done using Python and ROS2,
+                  where I will be creating a ROS2 package that will be able to
+                  communicate with the arduino board and control the motors and
+                  sensors. In addition to this, the design of the robot platorm
+                  will also be entirely designed by me, using a CAD software
+                  like Fusion 360 or OnShape. As of now, there are still no
+                  videos available, but I will be starting to record them soon.
+                </p>
+                <a
+                  href="https://github.com/PedroS235/perceptron_ws"
+                  target="_blank"
+                  class="btn card-btn"
+                  >GitHub Repo</a
+                >
+                <a
+                  href="https://www.youtube.com/channel/UCC-Q_2ExWDKztGBnAiAb_CQ"
+                  target="_blank"
+                  class="btn card-btn"
+                  >Youtube Channel</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Tasks Runner -->
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tasks Runner</h5>
+                <p class="card-text">
+                  This project arised from the need to setup quickly a new
+                  Linux/Mac computer with all the necessary tools and programs
+                  that I use on a daily basis. Instead of using a bash script, I
+                  have decided to implement a Python script that read a Yaml
+                  file containing all the tasks that I want to run. <br />
+                  Therefore, this way I can easily add new tasks to the file and
+                  it would even work for windows, since the script is written in
+                  Python. <br />
+                </p>
+                <a
+                  href="https://github.com/PedroS235/TaskRunner"
+                  target="_blank"
+                  class="btn card-btn"
+                  >GitHub Repo</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Tasks Runner -->
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Nvim Configuration</h5>
+                <p class="card-text">
+                  Since I am a big fan of the Nvim text editor, I have made my
+                  own configuration for it. <br />
+                  This configuration is usin the new Lua API, which is much more
+                  powerful than the old Vimscript API and easier to work with.
+                  <br />
+                  As the plugins manager, I have recently switched from Pakcer
+                  to Lazy.nvim, which is able to load nvim plugins on demand,
+                  making the startup time much faster. <br />
+
+                  This initial configuration was highly inspired by the Lunarvim
+                  where I have changed and added/removed some plugins to suit my
+                  needs.
+                </p>
+                <a
+                  href="https://github.com/PedroS235/nvim-conf"
+                  target="_blank"
+                  class="btn card-btn"
+                  >GitHub Repo</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
-
-    <main></main>
+    </main>
 
     <footer class="footer">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-12 col-sm-4 align-self-center">
             <div class="text-center">
@@ -101,5 +289,8 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script>
+      src = './js/script.js';
+    </script>
   </body>
 </html>
